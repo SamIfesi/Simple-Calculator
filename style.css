@@ -1,0 +1,111 @@
+:root {
+  --bg: #333;
+  --text: #333;
+  --btn: #ccc;
+  --big-btn: #3c3c3c;
+  --shadow: rgba(0, 0, 0, 0.12);
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+}
+main {
+  background: var(--bg);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section {
+  --bg-light: #fff;
+  background: var(--bg-light);
+  max-width: 320px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 20px;
+}
+#display {
+  color: var(--text);
+  font-size: 2em;
+  text-align: end;
+  padding: 10px;
+  width: 100%;
+  margin-top: 30px;
+  border-radius: 30px;
+  border: 1px solid rgb(245, 236, 236);
+  box-shadow: 3px 4px 8px var(--shadow);
+}
+#display:focus {
+  outline: none;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.grid1,
+.grid2,
+.grid3,
+.grid4,
+.grid5 {
+  display: flex;
+  justify-content: space-evenly;
+}
+.btn,
+.btn-del {
+  background: var(--bg-light);
+  color: var(--text);
+  font-size: 1em;
+  font-weight: 600;
+  text-align: center;
+  height: 60px;
+  width: 60px;
+  padding: 20px;
+  border-radius: 500px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 3px 3px 10px var(--shadow);
+}
+.btn:hover,
+.btn-del:hover {
+  background: buttonface;
+}
+.eql {
+  background: var(--big-btn);
+  color: var(--bg-light);
+}
+.big-btn {
+  font-size: 1em;
+  font-weight: 600;
+  padding: 20px 60px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+  box-shadow: 3px 3px 10px var(--shadow);
+}
+.big-btn:hover {
+  background: buttonface;
+  color: var(--text);
+}
+.btn-clr {
+  background: var(--bg-light);
+  color: var(--text);
+}
+.btn-clr:hover {
+  background: buttonface;
+}
+.btn:active,
+.big-btn:active,
+.btn-clr:active,
+.btn-del:active {
+  background: var(--btn);
+  transform: scale(0.75);
+}
